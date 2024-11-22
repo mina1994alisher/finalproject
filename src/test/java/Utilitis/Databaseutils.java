@@ -28,17 +28,17 @@ public class Databaseutils {
             ResultSetMetaData rsmd = resultSet.getMetaData();
             int colCount = rsmd.getColumnCount();
             while(resultSet.next()){
-                //System.out.println(resultSet.getString("invoice_number"));
+
                 List<String> row = new ArrayList<>();
                 for (int i = 1; i <colCount ; i++) {
                     //System.out.print(resultSet.getString(i) + "|| ");
                     row.add(resultSet.getString(i));
                 }
                 dataSet.add(row);
-                //System.out.println();
+
             }
             System.out.println(dataSet);
-            //close all connections
+
             resultSet.close();
             statement.close();
             connection.close();
@@ -51,7 +51,7 @@ public class Databaseutils {
     }
 
 
-    //Select query that will return the first record as a list of strings
+
     public  static List<String> selectRecord(String query){
         List<String> dataSet = new ArrayList<>();
         try {
@@ -80,7 +80,7 @@ public class Databaseutils {
     }
 
 
-    //Will select the first record and return back the data for that specific column
+
     public  static String selectRecord(String query, String colName){
         String dataSet= null;
 
@@ -95,7 +95,7 @@ public class Databaseutils {
                 dataSet= resultSet.getString(colName);
             }
             System.out.println(dataSet);
-            //close all connections
+
             resultSet.close();
             statement.close();
             connection.close();
