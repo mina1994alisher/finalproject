@@ -36,7 +36,7 @@ public class CreateCustomer {
         driver.getCurrentUrl();
 
         Assert.assertEquals(BaseURL,actualURL);
-        Assert.assertTrue(loginPage.loginCopyright.isDisplayed());
+        Assert.assertTrue(loginPage.loginButton.isDisplayed());
 
         loginPage.loginEmail.sendKeys(DataReader.getPropertyValue("userName"));
         loginPage.loginPassword.sendKeys(DataReader.getPropertyValue("userPassword"));

@@ -25,7 +25,7 @@ public class Driver {
                     ChromeOptions chromeOptions= new ChromeOptions();
                     chromeOptions.addArguments("--headless=old");
                     driver= new ChromeDriver(chromeOptions);
-
+                    break;
                 case "firefox":
                     driver= new FirefoxDriver();
                     break;
@@ -33,7 +33,7 @@ public class Driver {
                     FirefoxOptions firefoxOptions =new FirefoxOptions();
                     firefoxOptions.addArguments("--headless");
                     driver= new FirefoxDriver(firefoxOptions);
-
+                    break;
                 case "edge":
                     driver= new EdgeDriver();
                     break;
